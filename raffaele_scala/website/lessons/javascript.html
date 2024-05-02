@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="./../css files/pages.css" />
+  </head>
+  <body><header class="menu">
+    <div class="menu-logo">RAFFAELE SCALA</div>
+    <div class="menu-content">
+      <div class="menu-items">
+        <a href="./../helpers/helpers_redirect.html">HELPERS</a>
+        <a href="./lessons_redirect.html">LESSONS</a>
+      </div>
+      <a href="">SIGN IN</a>
+    </div>
+  </header>
+  <div class="div-box">
+    <div class="navigation">
+      <a href="./../../index.html">HOME</a>>
+      <a href="./lessons_redirect.html">LESSONS</a>>
+      <a href="./javascript.html">JavaScript</a>
+    </div>
+  </div>
+  <div class="text">
+    <h1>Lezione su JavaScript</h1>
+
+    <h2>Introduzione</h2>
+
+    <p>
+      Benvenuti alla lezione su JavaScript! Oggi impareremo i fondamenti di
+      questo potente linguaggio di programmazione.
+    </p>
+
+    <h2>Che cos'è JavaScript?</h2>
+
+    <p>
+      JavaScript è un linguaggio di programmazione interpretato comunemente
+      utilizzato per aggiungere interattività alle pagine web. È ampiamente
+      utilizzato per la creazione di applicazioni web moderne.
+    </p>
+
+    <h2>Sintassi di base</h2>
+
+    <p>
+      JavaScript può essere inserito all'interno di tag
+      <code>&lt;script&gt;</code> all'interno del documento HTML o esternamente
+      in file JavaScript separati.
+    </p>
+
+    <pre>
+  <code>// Esempio di script JavaScript
+  alert("Ciao, mondo!");
+  </code>
+</pre>
+
+    <h2>Variabili e tipi di dati</h2>
+
+    <p>
+      In JavaScript, le variabili vengono dichiarate utilizzando le parole
+      chiave <code>var</code>, <code>let</code>, o <code>const</code>. I tipi di
+      dati principali includono numeri, stringhe, booleani, oggetti e array.
+    </p>
+
+    <ol>
+      <li>
+        <strong>var:</strong> È stata la prima parola chiave utilizzata per
+        dichiarare variabili in JavaScript. Ha uno scope di funzione o, se
+        dichiarata al di fuori di qualsiasi funzione, ha uno scope globale. Una
+        variabile dichiarata con var può essere ri-dichiarata e aggiornata
+        ovunque all'interno della sua funzione o dello scope globale.
+      </li>
+      <li>
+        <strong>let:</strong> È stata introdotta con ES6 (ECMAScript 2015) per
+        risolvere alcuni problemi legati allo scope di var. Una variabile
+        dichiarata con let ha uno scope di blocco, che significa che è visibile
+        solo all'interno del blocco in cui è stata dichiarata. Inoltre, non può
+        essere ri-dichiarata nello stesso blocco di codice.
+      </li>
+      <li>
+        <strong>const:</strong> Anche questa è stata introdotta con ES6. Una
+        variabile dichiarata con const ha uno scope di blocco e, a differenza di
+        let, non può essere ri-dichiarata. Inoltre, una volta assegnato un
+        valore a una variabile const, questo valore non può essere modificato.
+      </li>
+    </ol>
+
+    <pre>
+  <code>
+    // Dichiarazione di variabili
+    var nome = "Mario";
+    let eta = 30;
+    const PI = 3.14;
+  </code>
+</pre>
+
+    <pre>
+  <code>
+    // Esempio di oggetto e array
+    let persona = {
+      nome: "Mario",
+      eta: 30,
+      hobby: ["calcio", "musica"]
+    };
+    console.log(persona.nome); // Output: Mario
+    console.log(persona.hobby[0]); // Output: calcio
+  </code>
+</pre>
+
+    <h2>Operatori</h2>
+
+    <p>
+      JavaScript supporta una varietà di operatori, inclusi operatori
+      aritmetici, di confronto e logici.
+    </p>
+
+    <pre>
+  <code>
+    let x = 10;
+    let y = 5;
+
+    let somma = x + y; // somma = 15
+    let maggiore = x > y; // maggiore = true
+    let logico = (x < 15) && (y > 0); // logico = true
+  </code>
+</pre>
+
+    <h2>Strutture di controllo</h2>
+
+    <p>
+      JavaScript supporta le solite strutture di controllo come <code>if</code>,
+      <code>else</code>, <code>for</code>, <code>while</code> e
+      <code>switch</code>.
+    </p>
+
+    <pre>
+  <code>
+    let numero = 10;
+
+    if (numero > 0) {
+        alert("Il numero è positivo");
+    } else {
+        alert("Il numero è negativo");
+    }
+  </code>
+</pre>
+
+    <h2>Funzioni</h2>
+
+    <p>
+      Le funzioni in JavaScript consentono di raggruppare blocchi di codice
+      riutilizzabili. Le funzioni possono essere dichiarate usando la parola
+      chiave <code>function</code>.
+    </p>
+
+    <pre>
+  <code>
+    // Esempio di funzione
+    function saluta(nome) {
+      alert("Ciao, " + nome + "!");
+    }
+
+    saluta("Mario"); // Output: Ciao, Mario!
+  </code>
+</pre>
+
+    <h2>Scope</h2>
+
+    <p>
+      JavaScript ha due tipi di scope: scope globale e scope locale. Le
+      variabili dichiarate al di fuori di una funzione hanno scope globale,
+      mentre le variabili dichiarate all'interno di una funzione hanno scope
+      locale.
+    </p>
+
+    <pre>
+  <code>
+    var globale = "Variabile globale";
+
+    function testScope() {
+        var locale = "Variabile locale";
+        console.log(globale); // Output: Variabile globale
+        console.log(locale); // Output: Variabile locale
+    }
+
+    testScope();
+    console.log(globale); // Output: Variabile globale
+    console.log(locale); // Output: Uncaught ReferenceError: locale is not defined
+  </code>
+</pre>
+
+    <h2>Eventi</h2>
+
+    <p>
+      JavaScript può essere utilizzato per gestire gli eventi della pagina web.
+      Gli eventi comuni includono click, mouseover, keypress, etc.
+    </p>
+
+    <pre>
+  <code>
+    &lt;button onclick="alert('Hai cliccato il pulsante!')"&gt;Clicca qui&lt;/button&gt;
+  </code>
+</pre>
+
+    <h2>Operatore di accesso a membri</h2>
+
+    <p>
+      L'operatore di accesso a membri (<code>.</code>) viene utilizzato per
+      accedere alle proprietà degli oggetti.
+    </p>
+    <h2>Operatore di assegnazione</h2>
+<p>con apici = stringa</p>
+<p>senza apici = valore numerico</p>
+<p>tipo booleano = true, false</p>
+
+<h2>Operatore di confronto</h2>
+<p>"==" = uguale a...</p>
+<p>"===" = identico a...</p>
+<p>"!==" = confronta il tipo</p>
+<p>"!=" = confronta il contenuto</p>
+<p>">", "<"</p>
+<p>">=", "<="</p>
+
+<h2>Operatori logici</h2>
+<p>"||" = or (almeno una deve essere vera)</p>
+<p>"&&" = and (entrambe devono essere vere)</p>
+
+<h2>Codizioni di esistenza</h2>
+<p>not logico(!) = contrario della variabile</p>
+<p>"!!" = contrario del contrario (restituisce false anche se una stringa è vuota)</p>
+<p>0 in js è falso</p>
+
+<hr>
+
+<p>true + true = 2</p>
+<p>true + false = 1</p>
+
+<hr>
+
+<p>null = tipo nullo</p>
+<p>undefined = tipo indefinito</p>
+
+<hr>
+
+<p>numero (+,-,*,/) "stringa" = NaN (not a number)</p>
+
+<h2>Flowchart</h2>
+<p>Schema di lavoro caratterizzato da forme geometriche che indicano un determinato evento.</p>
+
+<h2>Costrutti</h2>
+<pre>
+  <code>
+    if (condizione) {
+      ...
+    } else if (...) {
+      ...
+    } else {
+      ...
+    }
+
+    switch (value) {
+      case value:
+        break;
+      case value2:
+        break;
+      case value3:
+        break;
+      default:
+        break;
+    }
+
+    do {
+      operazione
+    } while ()
+
+    while (condizione) {
+      operazione
+    }
+  </code>
+</pre>
+
+<h2>Array</h2>
+<p>const array = ["a", "b", "c" ] (lista di informazioni)</p>
+<p>"..." = spread operator ['...' array da copiare]</p>
+  </body>
+</html>
